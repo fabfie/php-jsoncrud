@@ -1,1 +1,8 @@
-{"data":[{"sku":"this","nombre":"repeated","estanteNro":"bullshit","estanteria":"hah"},{"sku":"this","nombre":"is","estanteNro":"wrongly","estanteria":"EDITED"},{"sku":"THIS","nombre":"IS","estanteNro":"WAY","estanteria":"WRONG"},{"sku":"one","nombre":"two","estanteNro":"three","estanteria":"FOUR"}]}
+{
+    "data": [
+        {"sku":"1","nombre":"LED amarillo","estanteNro":"1","estanteria":"6"},
+        {"sku":"5","nombre":"Transistor","estanteNro":"3","estanteria":"6"},
+        {"sku":"336","nombre":"Modulo sarasa","estanteNro":"4","estanteria":"2"},
+        {"sku":"1989","nombre":"Adaptador USB a microUSB","estanteNro":"0","estanteria":"10"}
+    ]
+}
