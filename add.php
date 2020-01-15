@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h5 class="modal-title">Agregar producto</h5>
+    <h5 class="modal-title">Nuevo producto</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -41,8 +41,8 @@
     </form>
 </div>
 <div class="modal-footer button-group">
-    <input type="submit" class="btn btn-primary"/>
-    <button type="button" data-dismiss="modal" class="btn btn-default">&times;</button>
+    <input type="submit" value="Agregar" class="btn btn-primary"/>
+    <button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
 </div>
 
 <?php

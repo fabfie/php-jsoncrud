@@ -22,7 +22,7 @@
         </div>
     </div>
     <main class="container-fluid">
-        <button type="button" id="add" class="btn btn-primary" data-toggle="modal" data-target="#modal">&plus; Agregar producto</button>
+        <button type="button" id="add" class="btn btn-primary" data-toggle="modal" data-target="#modal">&plus; Nuevo producto</button>
         <div class="container row d-flex justify-content-between">
             <table class="col-8">
                 <thead>
@@ -51,32 +51,31 @@
             </table>
             
             <svg width="320" height="500" class="col-4">
-                <!-- 8 --> <rect x="10" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 7 --> <rect x="100" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 6 --> <rect x="190" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 8 --> <rect id="estanteria8" x="10" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 7 --> <rect id="estanteria7" x="100" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 6 --> <rect id="estanteria6" x="190" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
                 
-                <!-- 15 --> <rect x="10" y="40" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 14 --> <rect x="10" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 13 --> <rect x="10" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 12 --> <rect x="10" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                
-                <!-- 11 --> <rect x="120" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 10 --> <rect x="120" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 9 --> <rect x="120" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                
-                <!-- 5 --> <rect x="150" y="130" width="30" height="90" style="fill:rgb(255,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 4 --> <rect x="150" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 3 --> <rect x="150" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                
-                <!-- 0 --> <rect x="280" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 1 --> <rect x="280" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 2 --> <rect x="280" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 15 --> <rect id="estanteria15" x="10" y="40" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 14 --> <rect id="estanteria14" x="10" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 13 --> <rect id="estanteria13" x="10" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 12 --> <rect id="estanteria12" x="10" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+
+                <!-- 11 --> <rect id="estanteria11" x="120" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 10 --> <rect id="estanteria10" x="120" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 9 --> <rect id="estanteria9" x="120" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+
+                <!-- 5 --> <rect id="estanteria5" x="150" y="130" width="30" height="90" style="fill:rgb(255,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 4 --> <rect id="estanteria4" x="150" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 3 --> <rect id="estanteria3" x="150" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+
+                <!-- 0 --> <rect id="estanteria0" x="280" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 1 --> <rect id="estanteria1" x="280" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 2 --> <rect id="estanteria2" x="280" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
                 
                 <rect x="-20" y="290" width="30" height="90" style="fill:rgba(0,0,0,0);stroke-width:.5;stroke:rgba(0,0,0,.2)" />
                 <rect x="-20" y="200" width="30" height="90" style="fill:rgba(0,0,0,0);stroke-width:.5;stroke:rgba(0,0,0,.2)" />
                 <rect x="-20" y="110" width="30" height="90" style="fill:rgba(0,0,0,0);stroke-width:.5;stroke:rgba(0,0,0,.2)" />
                 <rect x="-20" y="20" width="30" height="90" style="fill:rgba(0,0,0,0);stroke-width:.5;stroke:rgba(0,0,0,.2)" />
-                
                 <rect x="-10" y="450" width="160" height="40" style="fill:rgba(0,0,0,0);stroke-width:.5;stroke:rgba(0,0,0,.2)" />
             </svg>
         </div>
@@ -97,6 +96,10 @@
                     }
                 });
             });
+
+            $('#modal').on('hidden.bs.modal', function() {
+                $(this).find('.modal-content').html('');
+            })
 
             $('.edit').on('click', function() {
                 $.ajax({
@@ -128,14 +131,13 @@
                     </div>
                     <div class="modal-footer button-group">
                         <input type="submit" value="Borrar" class="btn btn-danger"/>
-                        <button type="button" data-dismiss="modal" class="btn btn-primary">&times;</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-default">No</button>
                     </div>
                 `).appendTo(modalContent);
                 console.log($(this).parents('tr').html());
             });
         });
     </script>
+    <script src="svgRackHandler.js"></script>
 </body>
 </html>
-
-<?php

@@ -78,7 +78,7 @@ if (isset($_POST["id"])) {
 </div>
 <div class="modal-footer button-group">
     <input type="submit" value="Confirm changes" class="btn btn-primary"/>
-    <button type="button" data-dismiss="modal" class="btn btn-default">&times;</button>
+    <button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
 </div>
 
 
