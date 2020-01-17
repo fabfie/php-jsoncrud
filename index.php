@@ -50,33 +50,36 @@
                 </tbody>
             </table>
             
-            <svg width="320" height="500" class="col-4">
-                <!-- 8 --> <rect id="estanteria8" x="10" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 7 --> <rect id="estanteria7" x="100" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 6 --> <rect id="estanteria6" x="190" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+            <svg id="racksSVG" width="320" height="500" class="col-4">
+                <!-- 8 --> <rect id="r8" x="10" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 7 --> <rect id="r7" x="100" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 6 --> <rect id="r6" x="190" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
                 
-                <!-- 15 --> <rect id="estanteria15" x="10" y="40" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 14 --> <rect id="estanteria14" x="10" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 13 --> <rect id="estanteria13" x="10" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 12 --> <rect id="estanteria12" x="10" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 15 --> <rect id="r15" x="10" y="40" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 14 --> <rect id="r14" x="10" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 13 --> <rect id="r13" x="10" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 12 --> <rect id="r12" x="10" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
 
-                <!-- 11 --> <rect id="estanteria11" x="120" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 10 --> <rect id="estanteria10" x="120" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 9 --> <rect id="estanteria9" x="120" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 11 --> <rect id="r11" x="120" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 10 --> <rect id="r10" x="120" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 9 --> <rect id="r9" x="120" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
 
-                <!-- 5 --> <rect id="estanteria5" x="150" y="130" width="30" height="90" style="fill:rgb(255,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 4 --> <rect id="estanteria4" x="150" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 3 --> <rect id="estanteria3" x="150" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 5 --> <rect id="r5" x="150" y="130" width="30" height="90" style="fill:rgb(255,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 4 --> <rect id="r4" x="150" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 3 --> <rect id="r3" x="150" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
 
-                <!-- 0 --> <rect id="estanteria0" x="280" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 1 --> <rect id="estanteria1" x="280" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
-                <!-- 2 --> <rect id="estanteria2" x="280" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 0 --> <rect id="r0" x="280" y="310" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 1 --> <rect id="r1" x="280" y="220" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
+                <!-- 2 --> <rect id="r2" x="280" y="130" width="30" height="90" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
                 
                 <rect x="-20" y="290" width="30" height="90" style="fill:rgba(0,0,0,0);stroke-width:.5;stroke:rgba(0,0,0,.2)" />
                 <rect x="-20" y="200" width="30" height="90" style="fill:rgba(0,0,0,0);stroke-width:.5;stroke:rgba(0,0,0,.2)" />
                 <rect x="-20" y="110" width="30" height="90" style="fill:rgba(0,0,0,0);stroke-width:.5;stroke:rgba(0,0,0,.2)" />
                 <rect x="-20" y="20" width="30" height="90" style="fill:rgba(0,0,0,0);stroke-width:.5;stroke:rgba(0,0,0,.2)" />
                 <rect x="-10" y="450" width="160" height="40" style="fill:rgba(0,0,0,0);stroke-width:.5;stroke:rgba(0,0,0,.2)" />
+            </svg>
+            <svg>
+                <rect id="s0" x="10" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
             </svg>
         </div>
     </main>
