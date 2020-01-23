@@ -1,3 +1,28 @@
 table {
-    width: 70%
+    width: 70%;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+
+main > .container {
+    position: relative;
+}
+
+#scanner {
+    background: linear-gradient(transparent, #619bc7, #619bc7, transparent);
+    height: 150px;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    /* transition: top .5s ease-out; */
+}
+
+th, td {    
+    border: 1px solid transparent;
+    background: white;
+}
+
+#racksSVG {
+    background: white;
 }

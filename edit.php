@@ -14,10 +14,10 @@ if (isset($_POST["id"])) {
     $jsonfile = $all["data"];
     $jsonfile = $jsonfile[$id];
 
-    $post["sku"] = isset($_POST["sku"]) ? $_POST["sku"] : "";
-    $post["nombre"] = isset($_POST["nombre"]) ? $_POST["nombre"] : "";
-    $post["estanteNro"] = isset($_POST["estanteNro"]) ? $_POST["estanteNro"] : "";
-    $post["estanteria"] = isset($_POST["estanteria"]) ? $_POST["estanteria"] : "";
+    $post["code"] = isset($_POST["code"]) ? $_POST["code"] : "";
+    $post["subcode"] = isset($_POST["subcode"]) ? $_POST["subcode"] : "";
+    $post["shelf"] = isset($_POST["shelf"]) ? $_POST["shelf"] : "";
+    $post["rack"] = isset($_POST["rack"]) ? $_POST["rack"] : "";
 
 
 
@@ -45,13 +45,13 @@ if (isset($_POST["id"])) {
         <div class="form-group row">
             <label class="col-12">
                 <p><strong>SKU</strong></p>
-                <input type="text" name="sku" value="<?php echo $jsonfile["sku"] ?>" placeholder="eg. 1" class="form-control"/>
+                <input type="text" name="code" value="<?php echo $jsonfile["code"] ?>" placeholder="eg. 1" class="form-control"/>
             </label>
         </div>
         <div class="form-group row">
             <label class="col-12">
-                <p><strong>Nombre</strong></p>
-                <input type="text" name="nombre" value="<?php echo $jsonfile["nombre"] ?>" placeholder="eg. 'LED Amarillo de ????'" class="form-control"/>
+                <p><strong>subcode</strong></p>
+                <input type="text" name="subcode" value="<?php echo $jsonfile["subcode"] ?>" placeholder="eg. 'LED Amarillo de ????'" class="form-control"/>
             </label>
         </div>
         <div class="form-group row">
@@ -61,7 +61,7 @@ if (isset($_POST["id"])) {
                     <p>-1 indica que el producto no se encuentra en ninguna de las estanterías <br>del depósito y usualmente se dejan indicaciones sobre su ubicación en general.</p>
                     <p>La primera estantería es el 0.</p>
                 </div>
-                <input type="number" min="-1" name="estanteriaNro" value="<?php echo $jsonfile["estanteNro"] ?>" placeholder="eg. 3" class="form-control col-1"/>
+                <input type="number" min="-1" name="rackNro" value="<?php echo $jsonfile["shelf"] ?>" placeholder="eg. 3" class="form-control col-1"/>
             </label>
         </div>
         <div class="form-group row">
@@ -71,7 +71,7 @@ if (isset($_POST["id"])) {
                     <p>-1 indica que el producto no se encuentra en ninguno de los estantes de la estantería. <br>Sirve para darle énfasis a la descripción de ubicación.</p>
                     <p>El primer estante empieza en 0 y es el más alto.</p>
                 </div>
-                <input type="number" min="-1" name="estanteNro" value="<?php echo $jsonfile["estanteria"] ?>" placeholder="eg. 14" class="form-control col-1"/>
+                <input type="number" min="-1" name="shelf" value="<?php echo $jsonfile["rack"] ?>" placeholder="eg. 14" class="form-control col-1"/>
             </label>
         </div>
     </form>

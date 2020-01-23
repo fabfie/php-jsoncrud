@@ -25,7 +25,7 @@
                     <p>-1 indica que el producto no se encuentra en ninguna de las estanterías del depósito y usualmente se dejan indicaciones sobre su ubicación en general.</p>
                     <p>La primera estantería es el 0.</p>
                 </div>
-                <input type="number" min="-1" name="estanteriaNro" placeholder="eg. 3" class="form-control col-1"/>
+                <input type="number" min="-1" name="rack" placeholder="eg. 3" class="form-control col-1"/>
             </label>
         </div>
         <div class="form-group row">
@@ -35,7 +35,7 @@
                     <p>-1 indica que el producto no se encuentra en ninguno de los estantes de la estantería. Sirve para darle énfasis a la descripción de ubicación.</p>
                     <p>El primer estante empieza en 0 y es el más alto.</p>
                 </div>
-                <input type="number" min="-1" name="estanteNro" placeholder="eg. 14" class="form-control col-1"/>
+                <input type="number" min="-1" name="shelf" placeholder="eg. 14" class="form-control col-1"/>
             </label>
         </div>
     </form>
