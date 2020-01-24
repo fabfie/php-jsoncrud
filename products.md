@@ -253,7 +253,7 @@
 |4		|0		|2123	|		|			|
 |6		|3		|1935	|20		|			|
 |6		|3		|1934	|35		|			|
-|kit	|kit	|649	|		|910, 6, 912|
+|-2		|-2		|649	|		|910, 6, 912|
 |2		|7		|815    |		|			|
 |7		|0		|172	|		|			|
 |0		|7		|1395	|		|			|
@@ -262,6 +262,6 @@
 
 # Legend
 
- * If **Rack** and **Shelf** have the value `kit` --> search for **Code**_s within the_ **Kit list** _array_.
+ * If **Rack** and **Shelf** have the value `-2` --> search for **Code**_s within the_ **-2 list** _array_.
  * If **Rack** and **Shelf** have the value `-1` --> show _the message: "Placed nowhere within the racks"_
  * If **Subcode** has any value --> show: **Code** + `-` + **Subcode**.
