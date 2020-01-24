@@ -11,6 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 
 	<title>Localizador de Productos</title>
@@ -23,44 +24,52 @@
 	</div>
 
 	<main class="container-fluid">
-		<div class="col-8 container row d-flex justify-content-between">
-			<input type="text" id="searchBar" placeholder="Search..." class="form-control">
+		<div class="col-12 container-fluid">
+			<div class="input-group col-4 col-md-2">
+				<div class="input-group-prepend">
+					<span class="input-group-text">
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</span>
+				</div>
+				<input type="text" id="searchBar" placeholder="Search code..." class="form-control" autofocus>
+			</div>
 		</div>
-		<div class="col-8 container row d-flex justify-content-between p-0 mx-2">
+		<div class="col-12 col-md-6 container row d-flex justify-content-between p-0 mx-2">
 			<div id="scanner"></div>
-			<table class="table">
-				<thead>
-					<tr>
-						<th>Rack</th>
-						<th>Shelf</th>
-						<th>Code</th>
-						<th>Subcode</th>
-						<th>Kit list</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><input type="number" name="rack" min="-2" placeholder="(0-?)" class="form-control"></td>
-						<td><input type="number" name="shelf" min="-2" placeholder="(0-?)" class="form-control"></td>
-						<td><input type="number" name="code" placeholder="sku" class="form-control"></td>
-						<td><input type="number" name="subcode" placeholder="optional" class="form-control"></td>
-						<td><button id="addButton" type="button" class="edit btn btn-success">(+)</button></td>
-					</tr>
-					<?php foreach ($jsonfile->data as $index => $obj): ?>
+			<form method="post">
+				<table class="table">
+					<thead>
 						<tr>
-							<td><?php echo $obj->rack; ?></td>
-							<td><?php echo $obj->shelf; ?></td>
-							<td class="searchQueue"><?php echo $obj->code; ?></td>
-							<td><?php echo $obj->subcode; ?></td>
-							<td>
-								<!-- <button type="button" data-id="<?php /*echo $index; */?>" class="edit btn btn-warning" data-toggle="modal" data-target="#modal">Editar</button> -->
-								<!-- <button type="button" data-id="<?php /*echo $index; */?>" class="delete btn btn-danger" data-toggle="modal" data-target="#modal">Borrar</button> -->
-							</td>
+							<th>Rack</th>
+							<th>Shelf</th>
+							<th>Code</th>
+							<th>Subcode</th>
+							<th>Kit list</th>
 						</tr>
-					<?php endforeach; ?>
-				</tbody>
-			</table>
-			
+					</thead>
+					<tbody>
+						<tr class="addForm">
+							<td><input type="number" name="rack" min="-2" placeholder="(0-?)" class="form-control" required></td>
+							<td><input type="number" name="shelf" min="-2" placeholder="(0-?)" class="form-control" required></td>
+							<td><input type="number" name="code" placeholder="sku" class="form-control" required></td>
+							<td><input type="number" name="subcode" placeholder="optional" class="form-control"></td>
+							<td><button id="addButton" type="submit" class="btn btn-success">(+)</button></td>
+						</tr>
+						<?php foreach ($jsonfile->data as $index => $obj): ?>
+							<tr>
+								<td><?php echo $obj->rack; ?></td>
+								<td><?php echo $obj->shelf; ?></td>
+								<td class="searchQuery"><?php echo $obj->code; ?></td>
+								<td><?php echo $obj->subcode; ?></td>
+								<td>
+									<!-- <button type="button" data-id="<?php /*echo $index; */?>" class="edit btn btn-warning" data-toggle="modal" data-target="#modal">Editar</button> -->
+									<!-- <button type="button" data-id="<?php /*echo $index; */?>" class="delete btn btn-danger" data-toggle="modal" data-target="#modal">Borrar</button> -->
+								</td>
+							</tr>
+						<?php endforeach; ?>
+					</tbody>
+				</table>
+			</form>
 			<!-- <svg id="racksSVG" width="320" height="500" class="col-4">
 				<rect id="r8" x="10" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
 				<rect id="r7" x="100" y="10" width="90" height="30" style="fill:rgb(154,192,224);stroke-width:.5;stroke:rgb(0,0,0)" />
@@ -98,32 +107,32 @@
 	<script src="js/bootstrap.js"></script>
 
 	<script>
-		var modalContent = $('#modal .modal-content');
+		// var modalContent = $('#modal .modal-content');
 
 		$(document).ready(function() {
 			
-			$('#add').on('click', function() {
+			$('#addButton').on('click', function() {
 				$.ajax({
 					url: "add.php",
 					success: function(response) {
-						$(response).appendTo(modalContent);
+						console.log(response);
 					}
 				});
 			});
 
-			$('#modal').on('hidden.bs.modal', function() {
-				$(this).find('.modal-content').html('');
-			})
+			// $('#modal').on('hidden.bs.modal', function() {
+			// 	$(this).find('.modal-content').html('');
+			// })
 
-			$('.edit').on('click', function() {
-				$.ajax({
-					url: "edit.php?id=" + $(this).data('id'),
-					success: function(response) {
-						$(response).appendTo(modalContent);
-					}
-				});
-				console.log($(this).data('id'));
-			});
+			// $('.edit').on('click', function() {
+			// 	$.ajax({
+			// 		url: "edit.php?id=" + $(this).data('id'),
+			// 		success: function(response) {
+			// 			$(response).appendTo(modalContent);
+			// 		}
+			// 	});
+			// 	console.log($(this).data('id'));
+			// });
 
 
 			var scannerHTML = $('#scanner');
@@ -134,21 +143,24 @@
 			window = $(window);
 
 			function logKey(e) {
-				scannerHTML.attr('style', `top: ${window.scrollY + e.clientY - parseInt(scannerHeight) / 1.2}px`);
+				var finalTop = window.scrollY + e.clientY - parseInt(scannerHeight) / 1.2;
+				scannerHTML.attr('style', `top: ${finalTop}px`);
+				if (finalTop < 0) {
+					scannerHTML.hide();
+				} else {
+					scannerHTML.show();
+				}
 			}
 			
 			$('#searchBar').on('keyup', function() {
-				var array = $('table').find('.searchQueue');
+				var array = $('table').find('.searchQuery');
 				var text;
 				for (var i = 0; i < array.length; i++) {
 					text = array[i].textContent;
-					if (text.indexOf($('#searchBar').val() >= 0)) {
+					if (text.indexOf($('#searchBar').val()) >= 0)
 						$(array[i]).parent().show();
-						console.log("yes");
-					} else {
+					else
 						$(array[i]).parent().hide();
-						console.log("no");
-					}
 				}
 			});
 

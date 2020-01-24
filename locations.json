@@ -255,6 +255,6 @@
         {"rack": 6, "shelf": 1, "code": 934, "subcode": "", "kit list": [] },
         {"rack": 6, "shelf": 3, "code": 1935, "subcode": 20, "kit list": [] },
         {"rack": 6, "shelf": 3, "code": 1934, "subcode": 35, "kit list": [] },
-        {"rack": "kit", "shelf": "kit", "code": 649, "subcode": "", "kit list": [910,6,912] }
+        {"rack": -2, "shelf": -2, "code": 649, "subcode": "", "kit list": [910,6,912] }
     ]
 }

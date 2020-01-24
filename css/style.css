@@ -26,3 +26,7 @@ th, td {
 #racksSVG {
     background: white;
 }
+
+.searchQuery {
+    background: hsl(51, 40%, 98%);
+}
